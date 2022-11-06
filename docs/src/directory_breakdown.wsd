@@ -1,0 +1,23 @@
+@startmindmap
+!include ../styles.wsd
+
+title Directory breakdown
+* root
+
+** docs
+*** src
+*** out
+
+** src
+*** notebooks
+*** models
+**** <b> bert_based.py </b>
+**** <b> lstm_based.py </b>
+*** <b> main.py </b>
+
+** <i> raw </i>
+*** <i> datasets </i>
+
+** <b> install.py </b>
+
+@endmindmap
