@@ -9,6 +9,7 @@ common = [
     'matplotlib',
     'scikit-learn',
     'tensorflow-addons',
+    'livelossplot',
 ]
 
 windows = [
