@@ -1,12 +1,15 @@
 from typing import List
-from sys import platform
-import pip
+from sys import platform, executable
+from subprocess import check_call
 
 common = [
     'numpy',
     'pandas',
     'jupyter',
     'matplotlib',
+    'scikit-learn',
+    'tensorflow-addons',
+    'livelossplot',
 ]
 
 windows = [
@@ -14,7 +17,8 @@ windows = [
 ]
 
 darwin = [
-    # add any macOS specific packages here
+    'tensorflow-macos',
+    'tensorflow-metal'
 ]
 
 linux = [
@@ -24,7 +28,7 @@ linux = [
 
 def install(packages: List[str]) -> None:
     for package in packages:
-        pip.main(['install', package])
+        check_call([executable, '-m', 'pip', 'install', '--no-cache-dir', package])
 
 
 if __name__ == '__main__':
